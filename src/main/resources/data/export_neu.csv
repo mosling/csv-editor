@@ -1,0 +1,109 @@
+
+<Produkt>,<Beschreibung>,<Verkaufspreis>,<Gewicht>,<Sonderangebot ( 0 /1 )>,<Min. Auftragsanzahl>,<Produktnummer>,<System ID>,<ID der Steuerklasse>,<Masseinheit ID>,<Zus&auml;tzliche Produktattribute>
+DKS 3/13,D黚elklemmschelle,50.00,0,0,1,03106,1093,MwSt normal,13,3 bis 13,,,100,1200
+DKS 3/13,D黚elklemmschelle,62.10,0,0,1,04037,1094,MwSt normal,13,3 bis 13,,,100,1200
+DKS 3/13 GV,"D黚elklemmschelle
+Gro遶erpackung",237.00,0,0,1,24280,1095,MwSt normal,13,3 bis 13,,,1200,
+DKS 6/20,D黚elklemmschelle,32.90,0,0,1,14128,1096,MwSt normal,13,6 bis 20,,,100,800
+DKS 6/20,D黚elklemmschelle,73.00,0,0,1,14131,1097,MwSt normal,13,6 bis 20,,,100,800
+DKS 6/20 GV,"D黚elklemmschelle
+Gro遶erpackung",207.20,0,0,1,24293,1098,MwSt normal,13,6 bis 20,,800,800,
+DKS 8/28,D黚elklemmschelle,37.00,0,0,1,03117,1099,MwSt normal,13,8 bis 28,,,100,1000
+DKS 8/28,D黚elklemmschelle,83.80,0,0,1,03021,1100,MwSt normal,13,8 bis 28,,,100,1000
+DKS 8/28 GV,"D黚elklemmschelle
+Gro遶erpackung",290.00,0,0,1,24307,1101,MwSt normal,13,8 bis 28,,,1000,
+DKS 20/40,D黚elklemmschelle,41.25,0,0,1,03571,1102,MwSt normal,13,20 bis 40,,,75,750
+DKS 20/40,D黚elklemmschelle,79.13,0,0,1,03043,1103,MwSt normal,13,20 bis 40,,,75,750
+DKS 20/40 GV,"D黚elklemmschelle
+Gro遶erpackung",330.00,0,0,1,24310,1104,MwSt normal,13,20 bis 40,,,750,
+DSS 10,D黚elsteckschelle,26.90,0,0,1,03377,1105,MwSt normal,13,4 bis 12,,,100,1200
+DSS 10,D黚elsteckschelle,70.00,0,0,1,01036,1106,MwSt normal,13,4 bis 12,,,100,1200
+DSS 10,"D黚elsteckschelle
+Farbe: weiss",42.00,0,0,1,01195,1107,MwSt normal,13,4 bis 12,,,100,1200
+DSS 10 GV,"D黚elsteckschelle
+Gro遶erpackung",258.00,0,0,1,24323,1108,MwSt normal,13,4 bis 12,,,1200,
+DSS 21,D黚elsteckschelle,49.88,0,0,1,03407,1109,MwSt normal,13,12 bis 25,,,75,750
+DSS 21,D黚elsteckschelle,127.00,0,0,1,01209,1110,MwSt normal,13,12 bis 25,,,100,1000
+DSS 20/25,D黚elsteckschelle,82.10,0,0,1,03009,1111,MwSt normal,13,20 bis 25,,,100,400
+ESS 16-20,Einzelsteckschelle,41.50,0,0,1,03652,1112,MwSt normal,13,16 bis 20,,,100,1000
+ESS 16-20,Einzelsteckschelle,84.00,0,0,1,01225,1113,MwSt normal,13,16 bis 20,,,100,1000
+ESS 21-24,Einzelsteckschelle,71.55,0,0,1,03665,1114,MwSt normal,13,21 bis 24,,,150,600
+ESS 21-24,Einzelsteckschelle,142.50,0,0,1,01270,1115,MwSt normal,13,21 bis 24,,,150,600
+ESS 25-30,Einzelsteckschelle,56.00,0,0,1,03678,1116,MwSt normal,13,25 bis 30,,,100,400
+ESS 25-30,Einzelsteckschelle,115.00,0,0,1,01283,1117,MwSt normal,13,25 bis 30,,,100,400
+DSN 30,D黚elstecknagel,20.30,0,0,1,03173,1118,MwSt normal,13,,31 mm,,100,1200
+DSN 40,D黚elstecknagel,20.75,0,0,1,03355,1119,MwSt normal,13,,40 mm,,100,1200
+DSN 50,D黚elstecknagel,22.80,0,0,1,03560,1120,MwSt normal,13,,49 mm,,100,1200
+SH 15,Sammelhalter,101.40,0,0,1,03681,1236,MwSt normal,13,,,max. 15 Leitungen,50,
+SH 15,Sammelhalter,231.40,0,0,1,04011,1237,MwSt normal,13,,,NYM 3 x1,5,50
+SH 30,Sammelhalter,80.50,0,0,1,03694,1238,MwSt normal,13,,,max. 30 Leitungen,25,
+SH 30,Sammelhalter,174.75,0,0,1,04024,1239,MwSt normal,13,,,NYM 3 x1,5,25
+KB 10,Klemmb黦el,76.00,0,0,1,03333,1240,MwSt normal,13,,,max. 9 St點k,100,
+KB 10,Klemmb黦el,227.00,0,0,1,03984,1241,MwSt normal,13,,,"NYM 3 x1,5",5,100
+KB 20,Klemmb黦el,70.20,0,0,1,03559,1242,MwSt normal,13,,,max. 18 St點k,50,
+KB 20,Klemmb黦el,160.85,0,0,1,03997,1243,MwSt normal,13,,,"NYM 3 x1,5",5,50
+EC 16,Euroclip,35.10,0,0,1,03418,1244,MwSt normal,13,"15,0 - 16,0",,,75,750
+EC 16,Euroclip,62.18,0,0,1,01313,1245,MwSt normal,13,"15,0 - 16,0",,,75,750
+EC 18,Euroclip,26.50,0,0,1,03421,1246,MwSt normal,13,"17,6 - 18,5",,,50,500
+EC 18,Euroclip,45.25,0,0,1,01339,1247,MwSt normal,13,"17,6 - 18,5",,,50,500
+EC 19,Euroclip,55.10,0,0,1,03434,1248,MwSt normal,13,"18,6 - 19,3",,,100,400
+EC 19,Euroclip,96.70,0,0,1,01342,1249,MwSt normal,13,"18,6 - 19,3",,,100,400
+EC 20,Euroclip,56.20,0,0,1,03447,1250,MwSt normal,13,"19,8 - 21,0",,,100,400
+EC 20,Euroclip,103.00,0,0,1,01355,1251,MwSt normal,13,"19,8 - 21,0",,,100,400
+EC 22,Euroclip,69.70,0,0,1,03450,1252,MwSt normal,13,"21,5 - 22,5",,,100,400
+EC 22,Euroclip,112.30,0,0,1,01544,1253,MwSt normal,13,"21,5 - 22,5",,,100,400
+EC 25,Euroclip,78.00,0,0,1,03463,1254,MwSt normal,13,"24,8 - 26,0",,,100,400
+EC 25,Euroclip,122.70,0,0,1,01687,1255,MwSt normal,13,"24,8 - 26,0",,,100,400
+EC 28,Euroclip,72.53,0,0,1,03476,1256,MwSt normal,13,"27,5 - 28,8",,,75,300
+EC 28,Euroclip,103.35,0,0,1,01717,1257,MwSt normal,13,"27,5 - 28,8",,,75,300
+EC 32,Euroclip,74.85,0,0,1,03489,1258,MwSt normal,13,"31,0 - 32,5",,,75,300
+EC 32,Euroclip,115.43,0,0,1,01818,1259,MwSt normal,13,"31,0 - 32,5",,,75,300
+EC 37,Euroclip,72.80,0,0,1,03362,1260,MwSt normal,13,"37,0 - 39,0",,,50,200
+EC 37,Euroclip,103.85,0,0,1,01834,1261,MwSt normal,13,"37,0 - 39,0",,,50,200
+EC 40,Euroclip,78.00,0,0,1,03492,1262,MwSt normal,13,"38,5 - 40,0",,,50,200
+EC 40,Euroclip,118.90,0,0,1,01850,1263,MwSt normal,13,"38,5 - 40,0",,,50,200
+EC 50,Euroclip,59.28,0,0,1,03506,1264,MwSt normal,13,"49,5 - 51,0",,,30,120
+EC 50,Euroclip,88.92,0,0,1,01892,1265,MwSt normal,13,"49,5 - 51,0",,,30,120
+ESD 11,Clip-on Systemteile,32.20,0,0,1,03548,1266,MwSt normal,13,,11 mm,,100,1200
+ESD 30,Clip-on Systemteile,36.40,0,0,1,03388,1267,MwSt normal,13,,27 mm,,100,800
+ESD 30,Clip-on Systemteile,64.50,0,0,1,01951,1268,MwSt normal,13,,27 mm,,100,800
+ESD 45,Clip-on Systemteile,42.60,0,0,1,03391,1269,MwSt normal,13,,42 mm,,100,1000
+ESD 45,Clip-on Systemteile,78.00,0,0,1,02121,1270,MwSt normal,13,,42 mm,,100,1000
+ESD 80,Clip-on Systemteile,101.90,0,0,1,03344,1271,MwSt normal,13,,80 mm,,100,1000
+EKP,Clip-on Systemteile,39.50,0,0,1,03405,1272,MwSt normal,13,35 x 38,,,100,1000
+ESC,Euro-Schraub-Clip,75.00,0,0,1,03069,1273,MwSt normal,13,,f黵 M6,,200,2400
+AKS 11,Anreih-Klemmschelle,35.40,0,0,1,03292,1274,MwSt normal,13,"12,6 - 13,5",,,100,1000
+AKS 13,Anreih-Klemmschelle,40.50,0,0,1,03010,1275,MwSt normal,13,"15,0 - 16,0",,,100,1000
+AKS 16,Anreih-Klemmschelle,42.50,0,0,1,03032,1276,MwSt normal,13,"17,5 - 18,5",,,100,1000
+AKS 20,Anreih-Klemmschelle,45.70,0,0,1,03269,1277,MwSt normal,13,"20,0 - 21,2",,,100,400
+AKS 22,Anreih-Klemmschelle,46.70,0,0,1,03270,1278,MwSt normal,13,"21,5 - 22,5",,,100,400
+AKS 23,Anreih-Klemmschelle,60.30,0,0,1,03054,1279,MwSt normal,13,"24,0 - 26,0",,,100,400
+AKS 28,Anreih-Klemmschelle,55.35,0,0,1,03281,1280,MwSt normal,13,"27,5 - 28,5",,,75,300
+AKS 29,Anreih-Klemmschelle,46.70,0,0,1,03076,1281,MwSt normal,13,"31,0 - 32,0",,,50,200
+AKS 36,Anreih-Klemmschelle,67.46,0,0,1,03128,1282,MwSt normal,13,"38,0 - 40,0",,,50,200
+AKS 50,Anreih-Klemmschelle,88.40,0,0,1,03304,1283,MwSt normal,13,"49,5 - 51,0",,,30,120
+TB 10 UP,Tragb黦el unterputz,20.25,0,0,1,18197,1284,MwSt normal,13,,100 mm,,25,
+TB 20 UP,Tragb黦el unterputz,69.00,0,0,1,18214,1285,MwSt normal,13,,200 mm,,75,
+TB 10 AP,Tragb黦el aufputz,45.50,0,0,1,18184,1286,MwSt normal,13,,100 mm,,25,
+TB 20 AP,Tragb黦el aufputz,210.75,0,0,1,18201,1287,MwSt normal,13,,200 mm,,75,
+TA 30,Traganker,54.00,0,0,1,18227,1288,MwSt normal,13,,30 mm,,100,
+TA 100,Traganker,63.00,0,0,1,18230,1289,MwSt normal,13,,100 mm,,100,
+TA 30/25,Traganker,59.00,0,0,1,18142,1290,MwSt normal,13,,30 mm,,100,
+TA 30/55,Traganker,32.00,0,0,1,18155,1291,MwSt normal,13,,30 mm,,50,
+TA 100/25,Traganker,34.50,0,0,1,18168,1292,MwSt normal,13,,100 mm,,50,
+TA 100/55,Traganker,47.00,0,0,1,18171,1293,MwSt normal,13,,100 mm,,50,
+TAP,Tragankerplatte,30.00,0,0,1,18302,1294,MwSt normal,13,,,,100,
+USE 16-20/55,Unterputzschelle einfach,21.00,0,0,1,18009,1295,MwSt normal,13,16 - 20,55,,75,
+USE 20-25/55,Unterputzschelle einfach,31.00,0,0,1,18012,1296,MwSt normal,13,20 - 25,55,,100,
+USE 25-32/55,Unterputzschelle einfach,40.00,0,0,1,18025,1297,MwSt normal,13,25 - 32,55,,100,
+USD 16-20/25,Unterputzschelle doppelt,24.00,0,0,1,18113,1298,MwSt normal,13,16 - 20,25,,75,
+USD 20-25/25,Unterputzschelle doppelt,37.00,0,0,1,18126,1299,MwSt normal,13,20 - 25,25,,100,
+USD 25-32/25,Unterputzschelle doppelt,44.00,0,0,1,18139,1300,MwSt normal,13,25 - 32,25,,100,
+USD 16-20/55,Unterputzschelle doppelt,24.75,0,0,1,18038,1301,MwSt normal,13,16 - 20,55,,75,
+USD 20-25/55,Unterputzschelle doppelt,38.00,0,0,1,18315,1302,MwSt normal,13,20 - 25,55,,100,
+USD 25-32/55,Unterputzschelle doppelt,46.00,0,0,1,18328,1303,MwSt normal,13,25 - 32,55,,100,
+USA 16-20/55,Unterputzschelle autom.,24.75,0,0,1,18331,1304,MwSt normal,13,16 - 20,55 mm,,75,
+USA 20-25/11,Unterputzschelle autom.,24.00,0,0,1,18344,1305,MwSt normal,13,20 - 25,11,,100,
+USA 20-25/25,Unterputzschelle autom.,26.25,0,0,1,18357,1306,MwSt normal,13,20 - 25,25,,75,
+USA 20-25/55,Unterputzschelle autom.,27.75,0,0,1,18360,1307,MwSt normal,13,20 - 25,55,,75,
+USA 25-32/55,Unterputzschelle autom.,22.00,0,0,1,18100,1308,MwSt normal,13,25 - 32,55,,50,

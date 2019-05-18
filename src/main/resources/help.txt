@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <CustomLevels>
+        <!-- levels always visible if not OFF-Level is set (FATAL==100) -->
+        <CustomLevel name="ALWAYS" intLevel="10"/>
+    </CustomLevels>
+
+    <Appenders>
+        <Console name="thrifty-filter">
+            <PatternLayout pattern="%-5level - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL" />
+                <ThresholdFilter level="TRACE"/>
+            </Filters>
+        </Console>
+
+        <Console name="chatty-filter">
+            <PatternLayout pattern="%d{mm:ss.SSS} (%t) %-5level %logger{1.}:%L - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="ALWAYS" onMatch="DENY" onMismatch="NEUTRAL" />
+                <ThresholdFilter level="ERROR"/>
+            </Filters>
+        </Console>
+
+        <Console name="message-filter">
+            <PatternLayout pattern="%msg%n"/>
+            <Filters>
+                <ThresholdFilter level="ALWAYS" />
+            </Filters>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Logger name="com" level="debug" additivity="false">
+            <AppenderRef ref="thrifty-filter"/>
+            <AppenderRef ref="chatty-filter"/>
+            <AppenderRef ref="message-filter"/>
+        </Logger>
+
+    </Loggers>
+
+</Configuration><?xml version="1.0" encoding="UTF-8"?>
+                <Configuration>
+
+                    <CustomLevels>
+                        <!-- levels always visible if not OFF-Level is set (FATAL==100) -->
+                        <CustomLevel name="ALWAYS" intLevel="10"/>
+                    </CustomLevels>
+
+                    <Appenders>
+                        <Console name="thrifty-filter">
+                            <PatternLayout pattern="%-5level - %msg%n"/>
+                            <Filters>
+                                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL" />
+                                <ThresholdFilter level="TRACE"/>
+                            </Filters>
+                        </Console>
+
+                        <Console name="chatty-filter">
+                            <PatternLayout pattern="%d{mm:ss.SSS} (%t) %-5level %logger{1.}:%L - %msg%n"/>
+                            <Filters>
+                                <ThresholdFilter level="ALWAYS" onMatch="DENY" onMismatch="NEUTRAL" />
+                                <ThresholdFilter level="ERROR"/>
+                            </Filters>
+                        </Console>
+
+                        <Console name="message-filter">
+                            <PatternLayout pattern="%msg%n"/>
+                            <Filters>
+                                <ThresholdFilter level="ALWAYS" />
+                            </Filters>
+                        </Console>
+
+                    </Appenders>
+
+                    <Loggers>
+
+                        <Logger name="com" level="debug" additivity="false">
+                            <AppenderRef ref="thrifty-filter"/>
+                            <AppenderRef ref="chatty-filter"/>
+                            <AppenderRef ref="message-filter"/>
+                        </Logger>
+
+                    </Loggers>
+
+                </Configuration<?xml version="1.0" encoding="UTF-8"?>
+                               <Configuration>
+
+                                   <CustomLevels>
+                                       <!-- levels always visible if not OFF-Level is set (FATAL==100) -->
+                                       <CustomLevel name="ALWAYS" intLevel="10"/>
+                                   </CustomLevels>
+
+                                   <Appenders>
+                                       <Console name="thrifty-filter">
+                                           <PatternLayout pattern="%-5level - %msg%n"/>
+                                           <Filters>
+                                               <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL" />
+                                               <ThresholdFilter level="TRACE"/>
+                                           </Filters>
+                                       </Console>
+
+                                       <Console name="chatty-filter">
+                                           <PatternLayout pattern="%d{mm:ss.SSS} (%t) %-5level %logger{1.}:%L - %msg%n"/>
+                                           <Filters>
+                                               <ThresholdFilter level="ALWAYS" onMatch="DENY" onMismatch="NEUTRAL" />
+                                               <ThresholdFilter level="ERROR"/>
+                                           </Filters>
+                                       </Console>
+
+                                       <Console name="message-filter">
+                                           <PatternLayout pattern="%msg%n"/>
+                                           <Filters>
+                                               <ThresholdFilter level="ALWAYS" />
+                                           </Filters>
+                                       </Console>
+
+                                   </Appenders>
+
+                                   <Loggers>
+
+                                       <Logger name="com" level="debug" additivity="false">
+                                           <AppenderRef ref="thrifty-filter"/>
+                                           <AppenderRef ref="chatty-filter"/>
+                                           <AppenderRef ref="message-filter"/>
+                                       </Logger>
+
+                                   </Loggers>
+
+                               </Configuration>vvv
+                         CSVEditor Onlinehilfe
+                           Stand: 27.04.2003
+
+Der CSVEditor verarbeitet Textdateien, deren Zeilen Datensätze einer Datenbank
+sind. Die einzelnen Datenfelder in den Zeilen können z.B. durch Kommata (Comma
+Seperated Values) getrennt sein. Der CSVEditor ermöglicht die Darstellung nach
+verschieden Kriterien, erlaubt Sortieren und bietet eine Eingabemaske für das
+Einfügen neuer Datensätze.
+
+Öffnen von Dateien
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Bevor eine Datei geöffnet wird, sollten im Menü "Einstellungen -> Optionen..."
+das Trennzeichen (SeperationSign) und das Kommentarzeichen (QuotationSign), die
+in dieser Datei verwendet werden, eingestellt werden. Über "Datei -> Öffnen..."
+kann die Datei (bspw. "xyz.csv") ausgewählt werden. Falls sich in demselben
+Ordner wie die Datei eine Formatdatei (hier: "xyz.csv.format") befindet, kann im
+Öffnen-Dialog ausgewählt werden, ob diese verwendet werden soll.
+
+Arbeiten mit Formatdateien
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Ohne Formatdatei behandelt der CSVEditor alle Einträge wie Zeichenketten. Falls
+jedoch spezifiziert werden möchte, um welche Art(Datentyp) von Einträgen es sich
+in jeder Spalte handelt, muss eine Formatdatei angelegt werden.
+Eine Formatdatei bietet die Vorteile:
+- dass benutzerdefinierte Spaltennamen vergeben werden
+- dass Spalten mit Ganzzahlen richtig sortiert werden
+- dass Spalten mit Gleitpunktzahlen richtig sortiert werden
+- dass Vorgaben für das Einfügen neuer Zeilen datentypspezifisch gesetzt werden
+  können, z.B. kann eine Maximallänge eines Texteintrages oder ein Standardwert
+  festgelegt werden
+
+Erstellen von Formatdateien
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Um eine Formatdatei zu erstellen, muss eine Textdatei erstellt werden. Diese
+muss sich im selben Verzeichnis, wie die zugrunde liegende Datensatzdatei
+befinden und auch denselben Namen mit der Erweiterung ".format" haben.
+
+  Beispiel:
+    Die Datensatzdatei heisst "xyz.csv", dann muss die Formatdatei in demselben
+    Ordner "xyz.csv.format" heissen.
+
+Jede Zeile in der Formatdatei ist wie folgt aufgebaut:
+
+    Spaltenname::Datentyp::benutzerdefinierter_Standardwert::Option
+
+Ob und wieviele Optionen angegeben werden können, hängt von dem angegebenen
+Datentyp ab. Dabei werden folgende Datentypen unterschieden:
+
+Datentyp        | Standardwert | Option 1                  | Option 2
+--------------------------------------------------------------------------------
+CSVInteger      | 0            | Intervalluntergrenze      | Intervallobergrenze
+CSVString       | (leer)       | (nicht verfügbar)
+CSVStringLength | (leer)       | Max. Länge eines Eintrages (Standard: 5)
+CSVFloat        | 0.0          | Festkommastellen (Standard: keine Festkommastelle)
+CSVDate         | 01.01.2003   | Datumsformat (Standard: dd.MM.yyyy)
+
+Die Standardwerte werden verwendet, falls kein benutzerdefinierter Standardwert
+angegeben wird. Falls nur Spaltennamen angegeben werden, wird als Datentyp
+CSVString verwendet.
+
+  Beispiele für Einträge in einer Formatdatei:
+        Nummer::CSVInteger::0::-10::10
+        Beschreibung
+        Preis::CSVFloat::3.4::1
+        Notiz::CSVString::Ein möglicher Eintrag
+
+FAQ
+¯¯¯
+Q : Welche Einträge stehen in der Eingabemaske?
+A : Es werden zuerst die Felder mit Werten besetzt, die in der Baumstruktur
+    vorgegeben sind. Schliesslich wird in der Formatdatei nachgeschaut (falls
+    beim Öffnen die Verwendung dieser angegeben wurde), ob für die noch freien
+    Felder Standardwerte existieren.

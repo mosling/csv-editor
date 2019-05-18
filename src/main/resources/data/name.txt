@@ -1,0 +1,8 @@
+Name,Vorname,Wohnort,Alter
+Koehler,Steffen,Jena,32
+Bartke,Sylvia,Hermsdorf,45
+Winkel,Sylvia,Jena,31
+Koenig,Sven,"??",28
+Koehler,Hanka,Jena,29
+Koehler,Annika,Jena,3
+Koehler,Fabian,Jena,1.8

@@ -1,0 +1,67 @@
+MAPINFO|MapInfo TAB|DIR|BOTH|YES|YES|TAB Files(*.tab)%*.tab%All Files%*.*
+MIF|MapInfo MIF/MID|DIR|BOTH|YES|YES|MIF Files(*.mif)%*.mif%All Files%*.*
+SHAPE|ESRI Shape|DIR|BOTH|YES|NO|Shape Files(*.shp)%*.shp%All Files%*.*
+SAIF|Spatial Archive and Interchange Format|FILE|BOTH|NO|YES|SAIF Files(*.saf)%*.saf%Zip Files(*.zip)%*.zip%All Files%*.*
+ARCGEN|ESRI ArcInfo Generate|DIR|BOTH|YES|NO|Generate Files(*.gen)%*.gen%All Files%*.*
+GIF|GIF Image|FILE|OUTPUT|YES|NO|GIF Files(*.gif)%*.gif%PNG Files(*.png)%*.png%All Files%*.*
+PNG|PNG Image|FILE|OUTPUT|YES|NO|PNG Files(*.png)%*.png%All Files%*.*
+PHOCUS|PHOCUS PHODAT|FILE|BOTH|NO|NO|PHODAT Files(*.pdt)%*.pdt%All Files%*.*
+MOEP|BC MOEP|DIR|BOTH|NO|NO|MOEP Files(*.arc)%*.arc%MOEP Files(*.bin)%*.bin%All Files%*.*
+IGDS|Intergraph/MicroStation Design|FILE|BOTH|YES|NO|Design Files(*.dgn)%*.dgn%FC1 Files(*.fc1)%*.fc1%Positional Files(*.pos)%*.pos%All Files%*.*
+DWG|AutoCAD DWG/DXF|FILE|BOTH|YES|NO|DWG Files(*.dwg)%*.dwg%DXF Files(*.dxf)%*.dxf%All Files%*.*
+GEOCITY|Format GEOCITY|FILE|BOTH|YES|NO|GEOCITY Files(*.geo)%*.geo%All Files%*.*
+TABLE|Tabular Data|DIR|BOTH|NO|NO|CSV Files(*.csv)%*.csv%DBF Files(*.dbf)%*.dbf%FIP Files(*.fip)%*.fip%CAT Files(*.cat)%*.cat%All Files%*.*
+KF85|Swedish KF85|FILE|BOTH|YES|YES|KF85 Files(*.k85)%*.k85%All Files%*.*
+DLG|Digital Line Graph (DLG)|FILE|INPUT|NO|YES|DLG Files(*.dlg)%*.dlg%DLG Optional Files(*.opt)%*.opt%All Files%*.*
+SDTS|Spatial Data Transfer Standard (SDTS)|FILE|INPUT|NO|YES|SDTS Files(*CATD.DDF)%*CATD.DDF%All Files%*.*
+VPF|Vector Product Format (VPF)|DIR|INPUT|NO|NO|Feature Tables(*.*ft)%*.*ft%All Files%*.*
+E00|ESRI ArcInfo Export (E00)|FILEDIR|BOTH|YES|YES|E00 Files(*.e00)%*.e00%All Files%*.*
+ARCINFO|ESRI ArcInfo Coverage|DIR|BOTH|YES|YES|Coverage Files(*.adf)%*.adf%All Files%*.*
+SDE|ESRI Spatial Database Engine V2.x (SDE)|DATABASE|BOTH|YES|NO|
+NULL|NULL (Nothing)|DATABASE|BOTH|YES|NO|
+WHITESTAR|GeoGraphix CDF (WhiteStar)|FILE|BOTH|YES|NO|CDF Files(*.cdf)%*.cdf%All Files%*.*
+NTX|Caris NTX|FILE|BOTH|YES|YES|NTX Files(*.ntx)%*.ntx%All Files%*.*
+SWORLD|Smallworld|DATABASE|BOTH|NO|NO
+INTERLIS|INTERLIS|FILE|BOTH|YES|NO|INTERLIS Files(*.ili)%*.ili%All Files%*.*
+MGE|Intergraph MGE|FILE|INPUT|NO|NO|Design Files(*.dgn)%*.dgn%Design Files(*.cad)%*.cad%All Files%*.*
+SDE30|ESRI Spatial Database Engine V3.x/ArcSDE 8|DATABASE|BOTH|YES|NO|
+FF|AutoKa Transfer File (FF)|FILE|BOTH|YES|NO|FF Files(*.ff*)%*.ff*%All Files%*.*
+FACET|Facet|FILEDIR|BOTH|YES|NO|Facet Files(*.xdr)%*.xdr%All Files%*.*
+MASIK|Swedish MASIK|DIR|BOTH|YES|NO|All Files%*.*
+SDL|MapGuide SDL|DIR|BOTH|YES|NO|SDL Files(*.sdl)%*.sdl%All Files%*.*
+SUMMARY|Summary Report|FILE|OUTPUT|YES|NO|Text Files(*.txt)%*.txt%All Files%*.*
+GIFPOINTNUM|GIF Point Numbering|FILE|OUTPUT|YES|NO|GIF Files(*.gif)%*.gif%All Files%*.*
+IDEX|Leica IDEX|FILE|BOTH|YES|NO|IDEX Files(*.idx)%*.idx%All Files%*.*
+GDMS|GDMS Dataset|DIR|INPUT|YES|NO|All Files%*.*
+GRD|PenMetrics GRD|FILE|BOTH|YES|NO|GRD Files(*.grd)%*.grd%All Files%*.*
+CCOGIF|CCOGIF|FILE|INPUT|NO|NO|CCOGIF Files(*.asc)%*.asc%All Files%*.*
+SPANS|Tydac SPANS VEH/VEC/TBA|FILEDIR|BOTH|YES|NO|SPANS .veh Files%*.veh%SPANS .tba Files%*.tba%All Files%*.*
+GEOTASK|GeoTask|DATABASE|BOTH|YES|NO|
+SQLLDR|Oracle SQL Loader (Attributes Only)|DIR|OUTPUT|YES|NO|SQL Loader Files(*.ctl)%*.ctl%All Files%*.*
+DBF|dBASE IV|DIR|OUTPUT|YES|NO|dBASE Files(*.dbf)%*.dbf%All Files%*.*
+CSV|Comma Separated Value|DIR|OUTPUT|YES|NO|CSV Files(*.csv)%*.csv%All Files%*.*
+ORACLE|Oracle Spatial (Relational)|DATABASE|BOTH|YES|NO|
+ORACLE8I|Oracle Spatial (Object)|DATABASE|BOTH|YES|NO|
+DSFL|Danish DSFL|FILE|INPUT|NO|YES|DSFL Files(*.dsf)%*.dsf%DSFL Files(*.fla)%*.fla%All Files%*.*
+VRML|Virtual Reality Modelling Language (VRML)|FILE|OUTPUT|YES|NO|VRML Files(*.wrl)%*.wrl%All Files%*.*
+VML|Vector Markup Language (VML)|FILE|OUTPUT|YES|NO|VML Files(*.vml)%*.vml%All Files%*.*
+IIIOGDI|III Open Geospatial Datastore Interface (OGDI)|DATABASE|INPUT|NO|NO|
+SICAD|SICAD|FILE|BOTH|YES|NO|SICAD Files(*.sqd)%*.sqd%SICAD Multiple Files(*.001)%*.001
+GINA|SHL VISION* GINA|FILE|BOTH|YES|NO|GINA Files(*.gia)%*.gia%All Files%*.*
+GINA26|SHL VISION* GINA26|FILE|BOTH|YES|NO|GINA26 Files(*.gia)%*.gia%All Files%*.*
+SPATIALWARE|Mapinfo SpatialWare|DATABASE|BOTH|YES|NO|
+GENAMAP|Genamap|DIR|INPUT|NO|NO|Map Headers(*.fh)%*.fh%All Files%*.*
+SLF|Standard Linear Format (SLF)|FILE|INPUT|NO|NO|SLF Files(*.slf)%*.slf%All Files%*.*
+ISO8211|ISO8211|FILE|INPUT|YES|NO|ISO8211 Files(*.ddf)%*.ddf%All Files%*.*
+FFS|FME Feature Store Files|DIR|BOTH|YES|NO|FFS Files(*.ffs)%*.ffs%All Files%*.*
+LSL_GOTHIC|Laser-Scan GOTHIC (Geographic)|DATABASE|BOTH|YES|NO|
+MDF|Cubewerx MDF|DIR|OUTPUT|YES|NO|MDF Files(*.mdf)%*.mdf%All Files%*.*
+NTF|OS(GB) NTF Products|DIR|INPUT|NO|YES|NTF Files(*.ntf)%*.ntf%All Files%*.*
+S57|S-57 (ENC) Hydrographic Data Format|DIR|INPUT|NO|YES|S-57 (ENC) Files(*.000)%*.000%All Files%*.*
+DTED|Digital Terrain Elevation Data (DTED)|DIR|INPUT|NO|YES|DTED Files(*.dt0)%*.dt0%DTED Files(*.dt1)%*.dt1%All Files%*.*
+TIGER|TIGER/Line|DIR|INPUT|NO|YES|TIGER Files(*.rt1)%*.rt1%All Files%*.*
+GDF|GDF (Geographic Data Files)|FILE|BOTH|YES|YES|GDF Files(*.gdf)%*.gdf%All Files%*.*
+USGS_DEM|USGS Digital Elevation Model (DEM)|FILE|INPUT|NO|YES|USGS DEM Files(*.dem)%*.dem%All Files%*.*
+CGDEF|ComGraphix Data Exchange Format (CGDEF)|FILE|BOTH|YES|NO|CGDEF Files(*.cgdef)%*.cgdef%All Files%*.*
+EPS|EPS (Encapsulated PostScript)|FILE|OUTPUT|YES|NO|EPS Files(*.eps)%*.eps%All Files%*.*
+QLF|CITS Data Transfer Format (QLF) File|FILE|INPUT|NO|NO|QLF Files(*.qlf)%*.qlf%All Files%*.*
