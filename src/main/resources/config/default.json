@@ -1,7 +1,10 @@
 {
-  "separationSign": ",",
+  "headerLines": "1",
+  "separationSign": "t",
   "quotationSign": "\"",
-  "dividerLocation": -1,
+  "dividerLocation": "-1",
   "largeIcons": false,
-  "treeVsisble": true
+  "treeVisible": true,
+  "currentDir": "C:\\Users\\koehlers\\development\\qsmp\\dm"
 }
+

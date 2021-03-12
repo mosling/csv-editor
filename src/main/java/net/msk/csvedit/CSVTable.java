@@ -139,7 +139,7 @@ public class CSVTable extends javax.swing.table.AbstractTableModel implements Cl
         if (hiddencols == null)
         {
             hiddencols = new Vector();
-            hiddencols.add(new Integer(c));
+            hiddencols.add(c);
             return;
         }
 
@@ -147,11 +147,10 @@ public class CSVTable extends javax.swing.table.AbstractTableModel implements Cl
 
         for (int i = 0; i < hiddencols.size(); i++)
         {
-            if (((Integer) hiddencols.elementAt(i)).intValue() < c)
+            if ((Integer) hiddencols.elementAt(i) < c)
                 pos = i;
         }
-        hiddencols.insertElementAt(new Integer(c), pos + 1);
-        System.out.println("adding hidden col: " + String.valueOf(c));
+        hiddencols.insertElementAt(c, pos + 1);
     }
 
     /**
@@ -370,14 +369,6 @@ public class CSVTable extends javax.swing.table.AbstractTableModel implements Cl
         cols--;
     }
 
-    public void output()
-    {
-        for (int i = 0; i < data.size(); i++)
-        {
-            ((CSVLine) data.get(i)).output();
-        }
-    }
-
     /**
      * Diese Funktion beschreibt das Ver"andern der vorhandenen Daten, dabei
      * soll dem Nutzer sp"ater datentypangepa"st ein Dialog erscheinen der
@@ -439,7 +430,6 @@ public class CSVTable extends javax.swing.table.AbstractTableModel implements Cl
                 if (getColumnDatatype(col).getClass() == CSVInteger.class)
                     calcValue = new Integer(Math.round(Float.parseFloat(calcValue.toString())));
                 setValueAt(calcValue, i, col);
-
             }
         }
     }

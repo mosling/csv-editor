@@ -64,8 +64,6 @@ public class BubbleSort
     {
         Object temp;
 
-        System.out.println("Vertausche " + Integer.toString(a) + " mit " +
-            Integer.toString(b) + ".");
         temp = v.elementAt(a);
         v.setElementAt(v.elementAt(b), a);
         v.setElementAt(temp, b);

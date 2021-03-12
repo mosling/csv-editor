@@ -58,21 +58,6 @@ public class CSVLine extends Vector implements Comparable
     public void addTableListener(CSVTable t)
     {
         tablis.add(t);
-        System.out.println("adding " + t.toString());
-    }
-
-    /**
-     * Ausgabe dieser Zeile auf Standardout, nur zu Testzwecken benutzen als
-     * Ausgabe der Daten wird die Klasse CSVWriter verwendet.
-     */
-    public void output()
-    {
-        for (int i = 0; i < size(); i++)
-        {
-            System.out.print(get(i).toString());
-            if (i < size() - 1) System.out.print("|");
-        }
-        System.out.println();
     }
 
     /**

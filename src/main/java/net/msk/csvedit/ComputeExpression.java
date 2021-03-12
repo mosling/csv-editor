@@ -36,7 +36,7 @@ public class ComputeExpression
         ComputeExpression ce = new ComputeExpression();
 
         ce.setExpression("--x+-x");
-        ce.putVariable("x", new Double(42));
+        ce.putVariable("x", 42.0);
         System.out.println(ce.computeExpr().toString());
     }
 

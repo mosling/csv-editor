@@ -30,16 +30,18 @@ public class CSVLineInput extends javax.swing.JDialog
      * @param b        maintable that sets the number of columns etc.
      * @param c        target line into the entry is added
      * @param defaults sets the entrys into the dialog
-     * @param formated if a format file is used the set to true
+     * @param formatted if a format file is used the set to true
      */
-    public CSVLineInput(java.awt.Frame parent, CSVTable b, CSVLine c, Vector defaults, boolean formated, boolean returnCancelValues)
+    public CSVLineInput(java.awt.Frame parent, CSVTable b, CSVLine c,
+                        Vector defaults, boolean formatted, boolean returnCancelValues)
     {
         super(parent, true);
         csvtab = b;
         csvline = c;
-        useFormatFile = formated;
+        useFormatFile = formatted;
         values = returnCancelValues;
         initComponents();
+        setLocationRelativeTo(parent);
         if (values) insertButton.setText(java.util.ResourceBundle.getBundle("csvlang").getString("change"));
         setDefaults(defaults);
     }

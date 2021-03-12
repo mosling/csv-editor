@@ -6,7 +6,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -22,20 +24,21 @@ public class CSVReader
     private String filename;
     // Kopfzeile der Tabelle
     private CSVLine header;
+    private List<String> preHeaderLines = new ArrayList<>();
     // Vektor von CSVLines
-    private Vector csvdata;
+    private CSVLine csvdata;
     // Vektor von CSVDatatype Instanzen
     private Vector datatype;
 
     /**
      * Creates new CSVReader
      */
-    public CSVReader()
+    public CSVReader(String filename)
     {
-        //        super("reader", null);
+        this.filename = filename;
         header = null;
         datatype = new Vector();
-        csvdata = new Vector();
+        csvdata = new CSVLine();
     }
 
     /**
@@ -59,7 +62,7 @@ public class CSVReader
      */
     public boolean isFormatFileAvailable()
     {
-        String filenameFormatFile = filename + ".format";
+        String filenameFormatFile = getFormatFilename();
         try
         {
             new FileReader(filenameFormatFile);
@@ -92,30 +95,38 @@ public class CSVReader
      * werden durch den übergebenen Trenner (sep) getrennt. Falls direkt nach und
      * vor einem Trenner Quotezeichen stehen wird der quotierte Text zum Feld.
      * Die erste Zeile enthält die Spaltenüberschriften.
-     *
-     * @param fname Pfad zur zu lesenden Datensatzdatei
      */
-    public void readFile(String fname)
+    public void readFile()
     {
-        filename = fname;
         useFormatFile = false;
         header = null;
         // die Zeichen zwischen Spaltenname und Datentyp
         char sep = CSVEditor.csvproperties.getSeparationSign();
         char qsign = CSVEditor.csvproperties.getQuotationSign();
+        int hl = CSVEditor.csvproperties.getHeaderLines();
         String dataline;
+        preHeaderLines.clear();
 
         BufferedReader in = null;
         try
         {
-            in = new BufferedReader(new FileReader(fname));
+            in = new BufferedReader(new FileReader(filename));
             while ((dataline = in.readLine()) != null)
             {
-                if (dataline.replaceAll(" ", "").equals("")) continue;
+                if (hl > 0)
+                {
+                    preHeaderLines.add(dataline);
+                    hl--;
+                    continue;
+                }
+                if (dataline.replaceAll(" ", "").equals(""))
+                {
+                    continue;
+                }
                 String[] sepsrc = dataline.split(String.valueOf(sep));
                 CSVLine l = new CSVLine(); // eine Zeile im Datensatz
                 boolean quoted = false; // ist die Zelle gequotet?
-                String currcell = "";
+                StringBuilder currcell = new StringBuilder();
                 int colcount = 0;
                 for (int i = 0; i < sepsrc.length; i++)
                 {
@@ -132,24 +143,29 @@ public class CSVReader
                     // solange quoted => in cell schreiben, sonst => dem Vektor hinzufügen
                     if (quoted)
                     {
-                        currcell = currcell + sepsrc[i] + sep;
-                    } else
+                        currcell.append(sepsrc[i]).append(sep);
+                    }
+                    else
                     {
-                        currcell = currcell + sepsrc[i];
-                        l.add(currcell);
+                        currcell.append(sepsrc[i]);
+                        l.add(currcell.toString());
                         colcount++;
                         //als Datentyp wird CSVString verwendet
                         while (datatype.size() < colcount)
                         {
                             datatype.add(new CSVString(""));
                         }
-                        currcell = "";
+                        currcell = new StringBuilder();
                     }
                 }
                 if (header == null)
                 {
                     header = l;
-                } else csvdata.add(l);
+                }
+                else
+                {
+                    csvdata.add(l);
+                }
             }//endwhile
         } catch (IOException e)
         {
@@ -158,7 +174,10 @@ public class CSVReader
         {
             try
             {
-                if (in != null) in.close();
+                if (in != null)
+                {
+                    in.close();
+                }
             } catch (IOException e)
             {
                 LOGGER.debug("failure at closing datafile: " + e.toString());
@@ -179,6 +198,16 @@ public class CSVReader
         try
         {
             bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
+            // Stored Pre Header lines are written
+            if (preHeaderLines.size() > 0)
+            {
+                for (String l : preHeaderLines)
+                {
+                    bw.write(l);
+                    bw.newLine();
+                }
+            }
+
             // Header-Zeile wird geschrieben
             if (withHeader)
             {
@@ -203,10 +232,17 @@ public class CSVReader
                 {
                     Object entry = innerEl.nextElement();
                     Object entrytype;
-                    entrytype = (edatatype.hasMoreElements() ? edatatype.nextElement() : new String());
-                    if (entrytype.getClass() == String.class) bw.write(CSVEditor.csvproperties.getQuotationSign());
+                    entrytype = (edatatype.hasMoreElements() ? edatatype.nextElement() :
+                            new String());
+                    if (entrytype.getClass() == String.class)
+                    {
+                        bw.write(CSVEditor.csvproperties.getQuotationSign());
+                    }
                     bw.write(entry.toString());
-                    if (entrytype.getClass() == String.class) bw.write(CSVEditor.csvproperties.getQuotationSign());
+                    if (entrytype.getClass() == String.class)
+                    {
+                        bw.write(CSVEditor.csvproperties.getQuotationSign());
+                    }
                     if (innerEl.hasMoreElements())
                     {
                         bw.write(CSVEditor.csvproperties.getSeparationSign());
@@ -221,7 +257,10 @@ public class CSVReader
         {
             try
             {
-                if (bw != null) bw.close();
+                if (bw != null)
+                {
+                    bw.close();
+                }
             } catch (IOException e)
             {
                 LOGGER.debug("failure at closing datafile: " + e.toString());
@@ -230,6 +269,10 @@ public class CSVReader
         }
     }
 
+    public String getFormatFilename()
+    {
+        return filename + ".format";
+    }
 
     /**
      * Falls eine Format-Datei verwendet werden soll, dann muss diese Methode
@@ -240,7 +283,7 @@ public class CSVReader
      */
     public void readFormatFile()
     {
-        String filenameFormatFile = filename + ".format";
+        String filenameFormatFile = getFormatFilename();
         useFormatFile = true;
         header = (CSVLine) getHeaderFromFormatFile(filenameFormatFile);
 
@@ -273,7 +316,10 @@ public class CSVReader
             in = new BufferedReader(new FileReader(fnameFormatFile));
             while ((dataline = in.readLine()) != null)
             {
-                if (dataline.replaceAll(" ", "").equals("")) continue;
+                if (dataline.replaceAll(" ", "").equals(""))
+                {
+                    continue;
+                }
                 String[] src = dataline.split(sep);
                 String[] dest = new String[(src.length >= 2) ? src.length - 2 : 0];
                 try
@@ -281,18 +327,19 @@ public class CSVReader
                     if (src[1].equalsIgnoreCase("m"))
                     {
                         datatypesStr.add(src[2]);
-                        mandatoryFlags.add(new Boolean(true));
+                        mandatoryFlags.add(Boolean.TRUE);
                         System.arraycopy(src, 3, dest, 0, src.length - 3);
-                    } else
+                    }
+                    else
                     {
                         datatypesStr.add(src[1]);
-                        mandatoryFlags.add(new Boolean(false));
+                        mandatoryFlags.add(Boolean.FALSE);
                         System.arraycopy(src, 2, dest, 0, src.length - 2);
                     }
                 } catch (IndexOutOfBoundsException e)
                 {
                     datatypesStr.add("CSVString");
-                    mandatoryFlags.add(new Boolean(false));
+                    mandatoryFlags.add(Boolean.FALSE);
                 }
                 datatypesStrParameters.add(dest);
             }
@@ -307,7 +354,10 @@ public class CSVReader
         {
             try
             {
-                if (in != null) in.close();
+                if (in != null)
+                {
+                    in.close();
+                }
             } catch (IOException e)
             {
                 LOGGER.debug("failure at closing datafile: " + e.toString());
@@ -332,8 +382,7 @@ public class CSVReader
                 colclass = Class.forName("net.msk.csvedit.CSVDatatypes." + dtclassname);
             } catch (ClassNotFoundException e)
             {
-                LOGGER
-                    .debug("net.msk.csvedit.CSVDatatypes." + dtclassname + " nicht definiert, stattdessen wird CSVString verwendet");
+                LOGGER.debug("net.msk.csvedit.CSVDatatypes." + dtclassname + " nicht definiert, " + "stattdessen wird CSVString verwendet");
                 colclass = CSVString.class;
             }
             try
@@ -368,12 +417,15 @@ public class CSVReader
             in = new BufferedReader(new FileReader(fnameFormatFile));
             while ((dataline = in.readLine()) != null)
             {
-                if (dataline.replaceAll(" ", "").equals("")) continue;
+                if (dataline.replaceAll(" ", "").equals(""))
+                {
+                    continue;
+                }
                 colnames.add(dataline.split(sep)[0]);
             }
         } catch (FileNotFoundException e)
         {
-            LOGGER.warn("failure at opening formatfile");
+            LOGGER.warn("missing format file " + fnameFormatFile);
             useFormatFile = false;
         } catch (IOException e)
         {
@@ -382,7 +434,10 @@ public class CSVReader
         {
             try
             {
-                if (in != null) in.close();
+                if (in != null)
+                {
+                    in.close();
+                }
             } catch (IOException e)
             {
                 LOGGER.debug("failure at closing datafile: " + e.toString());

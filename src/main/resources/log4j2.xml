@@ -34,7 +34,7 @@
 
     <Loggers>
 
-        <Logger name="com" level="debug" additivity="false">
+        <Logger name="net.msk" level="debug" additivity="false">
             <AppenderRef ref="thrifty-filter"/>
             <AppenderRef ref="chatty-filter"/>
             <AppenderRef ref="message-filter"/>

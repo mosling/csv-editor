@@ -5,6 +5,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -31,46 +33,29 @@ import java.io.InputStream;
 public class CSVEditor
 {
 
-    private static Logger LOGGER = LogManager.getLogger( CSVEditor.class );
-
     // globale Einstellungen für die Anwendung
     static public CSVProperties csvproperties;
+    private static Logger LOGGER = LogManager.getLogger(CSVEditor.class);
 
-    public static void main( String args[] )
+    public static void main(String args[])
     {
 
-        try (InputStream configStream = CSVEditor.class.getResourceAsStream( "/config/default.json" ))
+        try (InputStream configStream = CSVEditor.class.getResourceAsStream("/config/default.json"))
         {
-            if ( null != configStream )
+            if (null != configStream)
             {
                 ObjectMapper mapper = new ObjectMapper();
-                csvproperties = mapper.readValue( configStream, CSVProperties.class );
+                csvproperties = mapper.readValue(configStream, CSVProperties.class);
             }
-        }
-        catch ( IOException e )
+        } catch (IOException e)
         {
-            LOGGER.debug( e );
-            LOGGER.warn( e.getMessage() );
+            LOGGER.debug(e);
+            LOGGER.warn(e.getMessage());
 
             csvproperties = new CSVProperties();
         }
 
-        try
-        {
-            UIManager.setLookAndFeel( "com.sun.java.swing.plaf.windows.WindowsLookAndFeel" );
-        }
-        catch ( Exception e1 )
-        {
-            try
-            {
-                UIManager.setLookAndFeel( "javax.swing.plaf.metal.MetalLookAndFeel" );
-            }
-            catch ( Exception e2 )
-            {
-            }
-        }
-
         CSVEditorGUI gui = new CSVEditorGUI();
-        gui.setVisible( true );
+        gui.setVisible(true);
     }
 }
